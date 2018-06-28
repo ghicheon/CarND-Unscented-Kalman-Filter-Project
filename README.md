@@ -92,7 +92,7 @@ for instructions and the project rubric.
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
-## how to run quickly?
-just do like this.It does from compiling to showing NIS value!
+## how to run quickly?   
+just do like this.It does from compiling to showing NIS value!     
 $sh run.sh
 
