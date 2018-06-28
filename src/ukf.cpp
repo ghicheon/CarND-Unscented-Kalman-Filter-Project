@@ -139,9 +139,9 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     UpdateLidar(meas_package);
   }
 
-  // print the output
-  cout << "x_ = " << x_ << endl;
-  cout << "P_ = " << P_ << endl;
+  // print the output for debug
+  //cout << "x_ = " << x_ << endl;
+  //cout << "P_ = " << P_ << endl;
 }
 
 /**
@@ -305,6 +305,10 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   long x_size = x_.size();
   MatrixXd I = MatrixXd::Identity(x_size, x_size);
   P_ = (I - K * H_) * P_;
+
+  //NIS
+  z = z - z_pred;
+  cout << "NIS(UpdateLidar):"  << z.transpose() * S.transpose() * z   << endl;
 }
 
 /**
@@ -411,4 +415,8 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   
   x_  = x_ + K*(z - z_pred);
   P_ = P_ - K*S*K.transpose();
+
+  //NIS
+  z = z - z_pred;
+  cout << "NIS(UpdateRadar):"  << z.transpose() * S.transpose() * z   << endl;
 }
