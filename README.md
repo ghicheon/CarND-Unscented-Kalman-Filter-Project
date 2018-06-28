@@ -1,4 +1,6 @@
+
 # Unscented Kalman Filter Project Starter Code
+
 Self-Driving Car Engineer Nanodegree Program
 
 In this project utilize an Unscented Kalman Filter to estimate the state of a moving object of interest with noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
@@ -89,4 +91,8 @@ for instructions and the project rubric.
 
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+
+## how to run quickly?
+just do like this.It does from compiling to showing NIS value!
+$sh run.sh
 
